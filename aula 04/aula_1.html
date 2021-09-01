@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+	// criamos função para facilitar a programação
+	function pulaLinha() { 
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	//função que recebe parametro dentro de () podemos colocar um nome para chamar o doc que queremos apresentar.   é possivel tambem colocar uma função dentro de outra função
+	function mostra (frase){
+		//no campo atribuido "frase", incluirá aquilo que digitarmos entre () quando chamarmos a função.
+		document.write(frase);
+		pulaLinha();
+	}
+	var ano = 2016;
+
+	mostra("Flávio tem "+(ano - 1977)+" anos");
+	
+	mostra("Joaquim tem "+(ano - 1996)+" anos");
+		
+	var ano = 2017
+
+	mostra("Barney tem "+(ano - 1976)+" anos");
+	
+	
+	
+</script>

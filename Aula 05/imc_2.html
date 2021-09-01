@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+
+<script>
+	function pulaLinha(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function calculaImc(altura, peso){
+		var imc = peso / (altura*altura);
+		//ou podemos colocar diretamente o return = peso / (altura*altura), que tambem da no mesmo
+		return imc;
+
+	}
+
+	var pesoFe = 78
+	var alturaFe =	1.72
+	var imcFe = calculaImc (alturaFe, pesoFe);
+
+	var pesoGaby = 56
+	var alturaGaby =	1.50
+	var imcGaby = calculaImc (alturaGaby, pesoGaby);
+
+	mostra("O Imc do Felipe é " + imcFe);
+	mostra("O Imc da Gaby é " + imcGaby);
+
+	
+
+</script>

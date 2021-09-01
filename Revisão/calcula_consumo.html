@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+
+<!--1 - Crie um novo arquivo, chame-o de calcula_consumo.html e armazene-o dentro da pasta logica. Não esqueça da estrutura mínima que devemos ter para cada um dos novos programas.
+
+2 - No mundo HTML adicione um título com o seguinte conteúdo: <h3>Álcool ou Gasolina?</h3>. Salve o programa e abra-o no navegador.
+
+3 - Problema: Seu carro tem um tanque de 40 litros. Com gasolina e usando todo o tanque você fez um caminhoComGasolina de 480 quilômetros. Qual é o consumoDeGasolina? Para calculá-lo, divida a distância percorrida pela quantidade de litros gastos. Imprima o valor utilizando document.write. Organize as contas em variáveis.
+
+4 - Com álcool, um tanque de 40 litros fez um caminhoComAlcool de 300 quilômetros. Qual é o consumoDeAlcool?
+
+5 - por minha conta em risco decidi fazer um recurso que retorna o valor gasto por km em $$ para cada categoria, gasolina e alcool.-->
+
+<h3>Álcool ou Gasolina</h3>
+
+<script>
+	var tanque = 40;
+	var caminhoComGasolina = 480;
+	var consumoDeGasolina = caminhoComGasolina / tanque;
+
+	var valorAlcool = 4;
+	var valorGasolina = 5;
+
+
+	document.write ("Meu Carro faz " + consumoDeGasolina + "KM/l 1 litro de gasolina <br>");
+
+
+	var caminhoComAlcool = 300;
+	var consumoDeAlcool = caminhoComAlcool / tanque;
+
+	document.write ("Meu carro faz " + consumoDeAlcool + " KM/l de alcool <br>");
+
+
+	document.write ("O Valor da gasolina é " + valorGasolina + " e o Valor do alcool é " + valorAlcool + "<br>");
+
+	var kmGasolina = valorGasolina/consumoDeGasolina;
+	var kmAlcool = valorAlcool/consumoDeAlcool;
+
+	document.write ("O Custo financeiro para andar de carro na gasolina é $" + (kmGasolina) + "por km rodado.<br>");
+
+	document.write ("O Custo financeiro para andar de carro no alcool é $" + kmAlcool + "por km rodado.<br>")
+
+</script>

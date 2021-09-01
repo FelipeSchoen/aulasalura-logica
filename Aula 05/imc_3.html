@@ -1,0 +1,55 @@
+<meta charset="utf-8">
+
+<script>
+	function pulaLinha(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function calculaImc(altura, peso){
+		var imc = peso / (altura*altura);
+		//ou podemos colocar diretamente o return = peso / (altura*altura), que tambem da no mesmo
+		return imc;
+
+	}
+	
+	var	nome = prompt("Informe seu nome")
+
+	var alturaInformada = prompt(nome + " Informe sua altura:");
+	var pesoInformado = prompt(nome + " Informe seu peso:");
+
+	var imc = calculaImc(alturaInformada,pesoInformado);
+
+	mostra(nome + " O seu IMC calculado é " + imc);
+
+	if (imc<18.5) {
+		mosta(nome + " voce esta abaixo do peso");
+	}
+
+	if (imc >18.4 && imc <25) {
+		mostra(nome + " Seu peso esta normal");
+	}
+	
+	if (imc >24.9 && imc <30) {
+			mostra(nome + " você esta com pré-obesidade");
+	}
+
+	if (imc >29.9 && imc <35) {
+			mostra	(nome+" você esta com Obesidade grau 1")
+	}
+	
+	if (imc >34.9 && imc <40){
+			mostra (nome+ " você esta com Obesidade grau 2")
+	}
+
+	if (imc > 39.9) {
+		mostra (nome + " você esta com Obesidade grau 3")
+	}
+
+
+</script>
