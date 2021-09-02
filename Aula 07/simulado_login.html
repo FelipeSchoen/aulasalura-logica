@@ -3,35 +3,32 @@
 <script>
 	//Exercicio, Que tal uma dificuldade um pouco maior? Imprima todos os números entre 30 e 40 (inclusive 30 e 40), porém os números 33 e 37 não devem ser impressos! No final escreva a palavra "FIM". Use o while para essa tarefa. DICA: o if pode ajudá-lo!
 
-	function pulaLinha(){
-		document.write("<br>");
+	var loginCadastro = "alura";
+	var  senhaCadastro = "alura123";
 
-	}
+	var maximoTentativas = 3;
+	var tentativaAtual = 1;
 
-	function mostra(frase){
-		document.write(frase);
-		pulaLinha()
+	while (tentativaAtual<=maximoTentativas){
+		
+		var loginInformado = prompt("Informe seu Login:");
+		var senhaInformado = prompt("Informe sua senha:");
 
-	}
+		if (loginCadastro == loginInformado && senhaCadastro==senhaInformado) {
 
-	var numero= 30
+			alert("Bem vindo " + loginInformado);
 
-	var	nLimite = 40
+			tentativaAtual=maximoTentativas; //acertou, então atribua o maximo de tentativas para sair do loop, que ao final do while vai incrementar +1 e finalizar o loop
 
-	while (numero <= nLimite){
-
-		if (numero==37) {
-			numero=numero+1;
-		}
-		if (numero==40) {
-			numero=numero+1
 		}else{
-
-		mostra(numero);
-		numero=numero+1;
-		}
-	}	
-
-	mostra("FIM")
+			if (tentativaAtual == 3) {
+                alert("Número permitido de tentativas ultrapassado!");
+            }else{
+            	alert("Login inválido. Tente novamente");
+            }
+        }
+        //com isso ele vai para proxima tentativa até esgotar a tentativa maxima
+        tentativaAtual=tentativaAtual+1
+    }
 
 </script>
