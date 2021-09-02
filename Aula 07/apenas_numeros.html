@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<script>
+	var idade = parseInt(prompt("Digite sua Idade:"))
+//quando solicitamos um prompt para que digite apenas numeros pode acontecer do usuario digitar texto, sendo assim o "conversor de texto para numero"(parseInt) retornará o NaN - Not a Number, logo não podemos realizar um wille que retorne o pedido para digitar idade apenas como if=NaN, sendo assim temos que usar isNan() que retornara um valor true or false.
+
+// no caso fica do jeito que esta abaixo.
+	while( isNaN(idade)){
+		idade= parseInt(prompt("Digite sua Idade"));
+	}
+	alert("sua idade informada é " + idade)
+
+</script>
