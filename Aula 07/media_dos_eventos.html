@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<script>
+	function pulaLinha(){
+		document.write ("<br>");
+	}
+
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var totalDeEventos = parseInt(prompt("Informe o total de Eventos: "));
+	var contador=1;
+
+	var totalDegastosComEventos=0
+
+	while(contador<=totalDeEventos){
+		
+		var gastos= parseInt(prompt("Informe o total de Gastos"));
+
+			//esta variavel abaixo deve ficar fora do whille, caso contratio toda vez que iniciar o loop sera zerado o totalDeGastos.
+		totalDegastosComEventos=totalDegastosComEventos+gastos
+		
+		contador++
+	}
+
+	var media = totalDegastosComEventos/totalDeEventos
+
+	mostra("Sua media de Gastos com eventos é de " + media);
+	mostra("fim");
+</script>

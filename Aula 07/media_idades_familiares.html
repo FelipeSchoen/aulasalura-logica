@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+
+<script>
+	function pulaLinha(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var totalFamiliares	= parseInt(prompt("Quantidade de Familiares"));
+
+	var numero=1;
+
+	var totalIdades=0; // precisa ser fora do while para ser incrementada em cada loop do whille, caso a var seja colocada dentro do whille toda vez que iniciar o loop será zerado o total de idade e não acrescentado como deve ser
+
+	while(numero <= totalFamiliares){
+
+		var idade = parseInt(prompt("Informe a Idade do familiar"));
+		totalIdades=totalIdades+idade;
+		numero++;
+
+
+		}
+
+	var mediaDasIdades=totalIdades/totalFamiliares;
+
+	mostra("A média de idade dos seus familiares é " + mediaDasIdades);
+	mostra("FIM");
+
+</script>
