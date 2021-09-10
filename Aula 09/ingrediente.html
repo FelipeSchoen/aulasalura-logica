@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+
+<h1>Receitas</h1>
+
+<script>
+
+	var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?")); // para saber quantos produtos serão incluidos
+
+	function quantidade1 (){
+		quantidade;
+	}
+	
+	function ingrediente(quantos){
+
+		var nIngrediente = [];
+
+		var contador = 1
+
+		while(contador <= quantidade){
+
+			var produto = prompt("Informe o ingrediente");
+			var achou = false;
+
+			if (produto !== nIngrediente) {
+				for (var posicao = 0; posicao <nIngrediente.length; posicao++) {
+					if(nIngrediente[posicao]==produto){
+						achou = true;
+						break;
+					}
+				}
+
+				if (achou == false) {
+					nIngrediente.push(produto);
+					contador ++;
+				}
+			}
+		}
+
+	}
+
+
+	var todosIngredientes = ingrediente();
+
+	console.log(todosIngredientes);
+
+	// no exercicio do professor não foi feito com funções, porem tambem fiz com funções por conta da var todosIngredientes e deu certo
+
+</script>
