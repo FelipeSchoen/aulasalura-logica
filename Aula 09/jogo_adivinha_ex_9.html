@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<center><h1>Jogo da adivinhação</h1></center>
+<script>
+	function pulaLinha(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+	function mostra(nome){
+		document.write(nome);
+		pulaLinha();
+		
+	}
+	var n1= 50
+	var n2= 100
+	
+	var dificuldade =parseInt(prompt("Digite o Grau de dificuldade que vc quer 1 ou 2? (digite apenas número)"));
+		//preciso fazer um if para receber o grau de dificuldade escolhido pelo usuario entre n1 e n2
+	function sorteia(n){
+		return Math.round(Math.randon()*n)
+	};
+
+	if (dificuldade==1){
+		n1
+	}
+	else if(dificuldade==2){
+		n2
+	}
+	else{
+
+		return dificuldade;
+	};
+	
+	//return dificuldad();
+
+
+
+
+
+
+</script>
