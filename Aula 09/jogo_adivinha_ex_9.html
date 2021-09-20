@@ -7,34 +7,81 @@
 	}
 	function mostra(nome){
 		document.write(nome);
-		pulaLinha();
-		
+		pulaLinha();	
 	}
-	var n1= 50
-	var n2= 100
-	
-	var dificuldade =parseInt(prompt("Digite o Grau de dificuldade que vc quer 1 ou 2? (digite apenas número)"));
-		//preciso fazer um if para receber o grau de dificuldade escolhido pelo usuario entre n1 e n2
 	function sorteia(n){
-		return Math.round(Math.randon()*n)
-	};
-
-	if (dificuldade==1){
-		n1
+		return Math.round(Math.random()*n);
 	}
-	else if(dificuldade==2){
-		n2
-	}
-	else{
+	var n1 = 10 // se o grau de dufuculdade for n1 terá 3 chances
+	var n2 = 50 // se o grau de dufuculdade for n2 terá 5 chances
+	var n3 = 100 // se o grau de dufuculdade for n3 terá 10 chances
 
-		return dificuldade;
-	};
+	var grauDificuldade = 1;
+
+	while(grauDificuldade<=3){
+
+		var dificuldade =parseInt(prompt("Digite o Grau de dificuldade que vc quer 1, 2 ou 3? (digite apenas número)"));
+		if (dificuldade==1){
+			dificuldade=n1;
+			break;
+		}
+		else if(dificuldade==2){
+			dificuldade=n2;
+			break;
+		}
+		else if (dificuldade==3){
+			dificuldade=n3;
+			break;
+		}
+		else
+			alert ("Digite apenas os números, citados")
+	}
+
+	var numeroPensado = sorteia(dificuldade);
+
+	//grau de dificuldade e chaces para acertar
 	
-	//return dificuldad();
+	var chances = 1
+	if (dificuldade==n1) {
+		chances=3;
+	}
+	else if (dificuldade==n2) {
+		chances=5;
+	}
+	else if (dificuldade==n3) {
+		chances=10;
+	}
+	//esta é a parte do jogo que atribui as tentativas de acerto. lembrando que não pode descontar das chances os numeros colocados repetidos.
+	var tentativa= [];
+	var contador=1;
 
+	while(contador<=chances){
+		var chute = parseInt(prompt("Vamos começar... Que número estou pensando:"));
 
+		var existe=false;
 
+		for ( var posicao = 0; posicao<tentativa.length; posicao ++){
+			if (tentativa[posicao]==chute) {
+				existe=true;
+				break;
+			}
+		}
 
+		if (existe==false) {
+			if(chute==numeroPensado){
+				mostra("Ual!!! Você acertou, pois eu pensei exatamente este numero " + numeroPensado)
+				break;
+			}
+			else{
+				mostra("Você errou, tente novamente.")
+			}
+			tentativa.push(chute);
+			contador++;
+		}
+	}
+
+	mostra("O número pensado foi " + numeroPensado);
+	mostra("FIM");
 
 
 </script>
